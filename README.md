@@ -1,5 +1,4 @@
 ``` bash
-{
 # nvidia driver
 sudo pacman -S nvidia nvidia-settings nvidia-utils lib32-nvidia-utils lib32-opencl-nvidia opencl-nvidia libvdpau libxnvctrl vulkan-icd-loader lib32-vulkan-icd-loader
 sudo pacman -Syu && reboot
@@ -93,5 +92,4 @@ sudo cp ~/Downloads/macOS-BigSur/* /usr/share/icons/default/
 sudo mkdir /usr/share/icons/default/cursors/
 sudo cp ~/Downloads/macOS-Bigsur/cursors/* /usr/share/icons/default/cursors
 vim ~/.config/gtk-3.0/settings.ini
-}
 ```
