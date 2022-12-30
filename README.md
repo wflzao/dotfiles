@@ -3,6 +3,8 @@
 sudo pacman -S nvidia nvidia-settings nvidia-utils lib32-nvidia-utils lib32-opencl-nvidia opencl-nvidia libvdpau libxnvctrl vulkan-icd-loader lib32-vulkan-icd-loader
 sudo pacman -Syu && reboot
 
+sudo pacman -S vim
+
 # nvidia settings
 sudo nvidia-settings
 mkdir ~/.config/autostart
@@ -56,7 +58,7 @@ EndSection
 
 # apps
 yay -S picom-ibhagwan-git
-sudo pacman -S lightdm-webkit2-greeter zathura zsh kitty vifm feh flameshot vim mpv code bitwarden htop protonvpn
+sudo pacman -S lightdm-webkit2-greeter zathura zsh kitty vifm feh flameshot mpv code bitwarden htop protonvpn
 
 # dotfiles
 https://github.com/Manas140/dotfiles/tree/02a1c0e4f66fba231fc84da73ef968a672e11d0c
