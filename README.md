@@ -41,7 +41,7 @@ sudo vim /etc/modprobe.d/nobeep.conf
 ---
 blacklist pcspkr
 ---
-rmmod pcspkr
+sudo rmmod pcspkr
 
 # mouse accel
 sudo touch /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
@@ -58,7 +58,17 @@ EndSection
 
 # apps
 yay -S picom-ibhagwan-git
-sudo pacman -S lightdm-webkit2-greeter zathura zsh kitty vifm feh flameshot mpv code bitwarden htop protonvpn
+sudo pacman -S lightdm-webkit2-greeter
+sudo pacman -S zathura
+sudo pacman -S zsh
+sudo pacman -S kitty
+sudo pacman -S vifm
+sudo pacman -S feh
+sudo pacman -S flameshot
+sudo pacman -S mpv
+sudo pacman -S code
+sudo pacman -S bitwarden
+
 
 # dotfiles
 https://github.com/Manas140/dotfiles/tree/02a1c0e4f66fba231fc84da73ef968a672e11d0c
@@ -67,12 +77,12 @@ https://github.com/Manas140/dotfiles/tree/02a1c0e4f66fba231fc84da73ef968a672e11d
 vim ~/.config/sxhkd/sxhkdrc
 
 # lightdm
-sudo pacman -R eos-lightdm-slick-greeter-theme
+sudo pacman -R eos-lightdm-slick-theme
 sudo pacman -R lightdm-slick-greeter
 yay -Syu lightdm-webkit2-theme-glorious
 sudo cp ~/Pictures/Wallpapers/* /usr/share/backgrounds/
 sudo vim /etc/lightdm/lightdm.conf
-sudo vim /etc/lightdm/lightdm-webkit-greeter.conf
+sudo vim /etc/lightdm/lightdm-webkit2-greeter.conf
 
 # polybar
 # https://github.com/0jdxt/polybar-mpris
@@ -81,6 +91,8 @@ mv get_status.sh ~/.config/polybar/scripts
 mv scroll_status.sh ~/.config/polybar/scripts
 vim ~/.config/polybar/config.ini
 vim ~/.config/polybar/modules.ini
+vim ~/.config/polybar/scripts/get_status.sh
+vim ~/.config/polybar/scripts/scroll_status.sh
 
 #rofi
 vim ~/.config/rofi/config.rasi
@@ -92,6 +104,6 @@ unzip macOS-BigSur.tar.gz
 sudo rm /usr/share/icons/default/*
 sudo cp ~/Downloads/macOS-BigSur/* /usr/share/icons/default/
 sudo mkdir /usr/share/icons/default/cursors/
-sudo cp ~/Downloads/macOS-Bigsur/cursors/* /usr/share/icons/default/cursors
+sudo cp ~/Downloads/macOS-BigSur/cursors/* /usr/share/icons/default/cursors
 vim ~/.config/gtk-3.0/settings.ini
 ```
